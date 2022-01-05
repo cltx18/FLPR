@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Expenses</h1>
+<table class="table">
+  <thead>
+    <tr>
+<th>Name</th>
+<th>Category</th>
+<th>Category</th>
+<th>Category</th>
+<th>Category</th>
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
+    <p>
+      <%= link_to "Show this expense", expense %>
+    </p>
+  <% end %>
+  </tbody>
+
+<%= link_to "New expense", new_expense_path %>
